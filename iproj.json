@@ -7,7 +7,7 @@
   "repository": "https://github.com/IBMiservices/addressApi",
   "curlib": "&CURLIB",
   "includePath": [
-    "addressref"
+    "references"
   ],
   "buildCommand": "/QOpenSys/pkgs/bin/makei build"
 }
