@@ -9,5 +9,6 @@
   "includePath": [
     "references"
   ],
-  "buildCommand": "/QOpenSys/pkgs/bin/makei build"
+  "buildCommand": "/QOpenSys/pkgs/bin/makei build",
+  "compileCommand": "/QOpenSys/pkgs/bin/makei compile -f {filename}"
 }
