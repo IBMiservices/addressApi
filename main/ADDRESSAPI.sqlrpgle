@@ -69,3 +69,35 @@ dcl-proc getAdresseParTexte Export;
     return json;
 
 end-proc;
+
+dcl-proc addressCount Export;
+    dcl-pi addressCount int(10);
+      pString pointer;
+    end-pi;
+
+    return json_GetLength(pString);
+end-proc;
+
+dcl-proc getAdresseInfo Export;
+    dcl-pi getAdresseInfo pointer;
+        pRecherche Pointer Value Options(*string:*nopass);
+        pLimit Int(5) Const options(*nopass);
+        pAutoComplete Char(1) Const options(*nopass);
+        pLat varchar(9) Const options(*nopass);
+        pLon varchar(10) Const options(*nopass);
+        pType varChar(64) const options(*nopass);
+        pPostCode varchar(5) const options(*nopass);
+    end-pi;
+
+
+End-proc;
+
+dcl-proc addressClose Export;
+    dcl-pi addressClose;
+      pJson pointer;
+    end-pi;
+
+    JSON_close(pJson);
+
+    return;
+end-proc;

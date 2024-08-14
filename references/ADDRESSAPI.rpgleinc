@@ -1,0 +1,20 @@
+**free
+dcl-pr getAdresseParTexte pointer;
+    pRecherche Pointer Value Options(*string:*nopass);
+    pLimit Int(5) Const options(*nopass);
+    pAutoComplete Char(1) Const options(*nopass);
+    pLat varchar(9) Const options(*nopass);
+    pLon varchar(10) Const options(*nopass);
+    pType varChar(64) const options(*nopass);
+    pPostCode varchar(5) const options(*nopass);
+end-pr;
+
+
+dcl-pr addressCount int(10);
+    pString pointer;
+end-pr;
+
+dcl-pr addressElementAt Pointer;
+    pString pointer;
+    pIndex Int(5) Const;
+end-pr;
