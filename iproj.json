@@ -10,5 +10,8 @@
     "testunit"
   ],
   "buildCommand": "/QOpenSys/pkgs/bin/makei build",
-  "compileCommand": "/QOpenSys/pkgs/bin/makei compile -f {filename}"
+  "compileCommand": "/QOpenSys/pkgs/bin/makei compile -f {filename}",
+  "postUsrlibl": [
+    "&postLiblobj"
+  ]
 }
