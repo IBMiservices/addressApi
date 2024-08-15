@@ -1,1 +1,1 @@
-SUBDIRS = references main
+SUBDIRS =  references main services testunit

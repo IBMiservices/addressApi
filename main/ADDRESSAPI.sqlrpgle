@@ -78,19 +78,24 @@ dcl-proc addressCount Export;
     return json_GetLength(pString);
 end-proc;
 
-dcl-proc getAdresseInfo Export;
-    dcl-pi getAdresseInfo pointer;
-        pRecherche Pointer Value Options(*string:*nopass);
-        pLimit Int(5) Const options(*nopass);
-        pAutoComplete Char(1) Const options(*nopass);
-        pLat varchar(9) Const options(*nopass);
-        pLon varchar(10) Const options(*nopass);
-        pType varChar(64) const options(*nopass);
-        pPostCode varchar(5) const options(*nopass);
+
+dcl-proc addressStringAt Export;
+    dcl-pi addressStringAt varchar(1024);
+      pObject pointer;
+      pProperty pointer Value options(*String:*Nopass);
     end-pi;
 
+    return json_GetStr(pObject:pProperty);
+end-proc;
 
-End-proc;
+dcl-proc addressNumAt Export;
+    dcl-pi addressNumAt int(5);
+      pObject pointer;
+      pProperty pointer Value options(*String:*Nopass);
+    end-pi;
+
+    return json_getNum(pObject:pProperty);
+end-proc;
 
 dcl-proc addressClose Export;
     dcl-pi addressClose;

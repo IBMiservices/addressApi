@@ -14,7 +14,16 @@ dcl-pr addressCount int(10);
     pString pointer;
 end-pr;
 
-dcl-pr addressElementAt Pointer;
-    pString pointer;
-    pIndex Int(5) Const;
+dcl-pr addressStringAt varchar(1024);
+    pObject pointer;
+    pProperty pointer Value options(*String:*Nopass);
+end-pr;
+
+dcl-pr addressNumtAt in(5);
+    pObject pointer;
+    pProperty pointer Value options(*String:*Nopass);
+end-pr;
+
+dcl-pr addressClose;
+    pJson pointer;
 end-pr;
