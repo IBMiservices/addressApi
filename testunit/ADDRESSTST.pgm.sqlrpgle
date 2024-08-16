@@ -1,6 +1,7 @@
 **FREE
 ctl-opt main('addresstest_1') options(*srcstmt:*nodebugio) dftactgrp(*no) actgrp(*new) bnddir('ADRESSEWBS');
 
+/copy 'ADDRESSAPI.RPGLEINC'
 Dcl-proc addresstest_1;
 Dcl-pi addresstest_1 extpgm('ADDRESSTST');
 End-pi;
@@ -29,7 +30,7 @@ dcl-proc testComptageNombreAdresse_1 export;
 
   count = addresscount(data);
 
-  print('Le nombre d''adresse est ' + %char(count));
+  dsply('Le nombre d''adresse est ' + %char(count));
 
   For index = 1 to count;
     data = addressElementAt(data:index-1);
