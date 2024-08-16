@@ -1,7 +1,7 @@
 STRPGMEXP PGMLVL(*CURRENT)
-  EXPORT SYMBOL('getAdresseParTexte')
-  EXPORT SYMBOL('addressCount')
-  EXPORT SYMBOL('addressStringAt')
-  EXPORT SYMBOL('addressNumgAt')
-  EXPORT SYMBOL('addressClose')
+  EXPORT SYMBOL(getAdresseParTexte)
+  EXPORT SYMBOL(addressCount)
+  EXPORT SYMBOL(addressStringAt)
+  EXPORT SYMBOL(addressNumAt)
+  EXPORT SYMBOL(addressClose)
 ENDPGMEXP
