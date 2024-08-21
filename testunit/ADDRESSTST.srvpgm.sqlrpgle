@@ -175,11 +175,11 @@ End-Proc;
        // ============================================================
        //  RPGUnit test case.
        // ============================================================
-Dcl-Proc testWhatever_1 export;
+Dcl-Proc test1_countlevel_1 export;
 End-PI;
 Dcl-PI *N;
 
-  print('Executing:       * testWhatever_1()');
+  print('Executing:       * test1_countlevel_1()');
   dcl-s data pointer;
   dcl-s adresseCourante pointer;
   dcl-s label varchar(256);
@@ -209,9 +209,16 @@ Dcl-PI *N;
     attribution = addressStringAt(data:'attribution');
     query = addressStringAt(data:'query');
     limit = addressNumAt(data:'limit');
-    Dcl-F OR; ();
+    
+    print('type: ' + type);
+    print('version: ' + version);
+    print('features: ' + features);
+    print('attribution: ' + attribution);
+    print('query: ' + query);
+    print('limit: ' + %char(limit));
+  EndFor;
          
-    addressClose(data);
+  addressClose(data);
   
          // Place your assertions here.
 

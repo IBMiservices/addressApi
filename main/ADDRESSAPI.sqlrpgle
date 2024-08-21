@@ -2,7 +2,7 @@
 //getAdresseParTexte
 
 
-Ctl-opt nomain Bnddir('ADRESSEWBS');
+Ctl-opt nomain Bnddir('ADDRESSWBS');
 
 /copy 'references/JSONXML.RPGLEINC'
 
