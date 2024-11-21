@@ -1,1 +1,1 @@
-SUBDIRS =  references main services testunitexe testunitscript liage
+SUBDIRS = services testunit main
